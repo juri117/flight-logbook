@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane prefHeight="200.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0">
+        <content>
+          <AnchorPane>
+               <children>
+                  <AnchorPane AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="nrLabel1" layoutY="5.0" text="Type" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="7.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ChoiceBox fx:id="typeChoice" layoutX="14.0" layoutY="26.0" prefWidth="180.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="25.0" />
+                  <AnchorPane layoutX="15.0" layoutY="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="60.0">
+                     <children>
+                        <Label fx:id="nrLabel11" layoutY="5.0" text="File" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="7.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pathText" layoutX="50.0" prefWidth="210.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="25.0" />
+                        <Button fx:id="searchBut" mnemonicParsing="false" onAction="#searchButton" text="search" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="25.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="140.0">
+                     <children>
+                        <Label fx:id="errorLabel" layoutY="40.0" text="ERROR" textFill="RED" visible="false" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="5.0" />
+                        <Button fx:id="okBut" layoutX="50.0" mnemonicParsing="false" onAction="#okButton" text="OK" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

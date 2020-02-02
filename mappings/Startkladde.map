@@ -1,0 +1,27 @@
+#[Startkladde Map]
+#Tue May 05 13:35:31 CEST 2015
+encoding=UTF-8
+seperator=,
+marker="
+fixMarker=true
+nr=-1
+pilot=3
+copilot=4
+passenger=-1
+plane=1
+planeCallSign=2
+launchMethod=5
+start=-1
+startDate=0
+startTime=8
+stop=-1
+stopDate=0
+stopTime=9
+flightTime=10
+flightTimeFormat=hh:mm
+landings=-1
+fromAf=6
+toAf=7
+distance=-1
+cost=-1
+note=11

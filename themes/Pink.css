@@ -1,0 +1,156 @@
+* {
+   -fx-focus-color: #C400C9;
+   -fx-focus-text-color: #FFFFFF;
+   -fx-bg-color: #FA40FF;
+   -fx-headerText-color: #FFFFFF;
+   -fx-even-color: #FB5EFF;
+   -fx-odd-color: #FDA8FF;
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+    -fx-background-color: -fx-bg-color;
+}
+
+.split-pane-divider {
+   -fx-background-color: -fx-focus-color;
+   }
+
+.list-cell:even {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: black;
+    -fx-background-color: -fx-bg-color;
+    -fx-control-inner-background: -fx-bg-color;
+}
+.list-cell:even {
+	-fx-background-color: -fx-even-color;
+}
+.list-cell:odd {
+	-fx-background-color: -fx-odd-color;
+}
+
+.list-cell:filled:focused:selected{
+	-fx-background-color: -fx-focus-color;
+	-fx-text-fill: -fx-focus-text-color;
+}
+
+.background {
+    -fx-background-color: -fx-bg-color;
+}
+
+.table-cell {
+    -fx-font-size: 12.0px;
+}
+
+.column-header{ 
+    -fx-font-size: 12.0px;
+    -fx-text-fill: -fx-headerText-color;
+}
+
+.table-view {
+    -fx-base: -fx-focus-color;
+    -fx-control-inner-background: -fx-bg-color;
+    -fx-background-color: transparent;
+    -fx-padding: 0.0;
+}
+.table-view .table-row-cell:even {
+	-fx-background-color: -fx-even-color;
+}
+.table-view .table-row-cell:odd {
+	-fx-background-color: -fx-odd-color;
+}
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: -fx-focus-text-color;
+}
+
+.context-menu {
+    -fx-border-width: 0;
+    -fx-background-radius: 7.0;
+    -fx-border-radius: 7.0;
+    -fx-background-color: -fx-focus-color;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: #000000;
+}
+
+.context-menu:focused:selected {
+	-fx-background-color: -fx-focus-color;
+  	-fx-border-width: 0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.5 ), 10.0, 0.0, 0.0, 0.0 );
+}
+
+.menu-item:focused {
+    -fx-background-color: -fx-focus-color;
+  	-fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.5 ), 10.0, 0.0, 0.0, 0.0 );
+}
+
+.menu:focused {
+    -fx-background-color: -fx-focus-color;
+  	-fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.5 ), 10.0, 0.0, 0.0, 0.0 );
+}
+
+.label {
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+    -fx-background-color: transparent;
+}
+
+.button {
+    -fx-border-color: #008000;
+    -fx-border-width: 0.0;
+    -fx-background-radius: 7.0;
+    -fx-border-radius: 7.0;
+    -fx-background-color: -fx-focus-color;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.5 ), 10.0, 0.0, 0.0, 0.0 );
+}
+
+.menu-button { 
+    -fx-border-color: -fx-bg-color;
+    -fx-border-width: 0.0;
+    -fx-background-radius: 7.0;
+    -fx-border-radius: 7.0;
+    -fx-background-color: -fx-focus-color;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: #000000;
+}
+
+.menu-button:hover {
+    -fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.5 ), 10.0, 0.0, 0.0, 0.0 );
+}
+
+.check-box *.box {
+	-fx-background-radius: 7.0;
+    -fx-border-radius: 7.0;
+  -fx-background-color: -fx-focus-color;
+  -fx-border-color: -fx-bg-color;
+  -fx-border-width: 0;
+  -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.5 ), 10.0, 0.0, 0.0, 0.0 );
+}
+
+.text-area .content{
+	-fx-background-color: -fx-odd-color;
+}
+
+.sliderBox{
+	-fx-background-radius: 10 0 10 10;
+    -fx-border-radius: 10 0 10 10;
+    -fx-border-width: 3.0;
+    -fx-border-color: -fx-faint-focus-color;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 3px;
+}

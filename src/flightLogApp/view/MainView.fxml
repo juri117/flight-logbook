@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flightLogApp.controller.MainViewController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.3" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane id="mainSplit" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitPane fx:id="splitPane1" dividerPositions="0.4" layoutX="8.0" layoutY="158.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Button id="addBut" fx:id="addBut" layoutX="55.0" layoutY="-40.0" mnemonicParsing="false" onAction="#addButton" prefHeight="38.0" prefWidth="50.0" textOverrun="CLIP" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="5.0" />
+                              <Button id="newBut" fx:id="tmpBut" layoutX="112.0" layoutY="-40.0" mnemonicParsing="false" onAction="#tmpButton" prefHeight="38.0" prefWidth="50.0" textOverrun="CLIP" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="5.0" />
+                              <MenuButton id="menuBut" fx:id="menuBut" ellipsisString="" layoutX="-3.0" layoutY="-40.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="50.0" textOverrun="CLIP" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                <items>
+                                    <MenuItem fx:id="newBookBut" mnemonicParsing="false" onAction="#newBookButton" text="%newBook" />
+                                    <MenuItem fx:id="importBut" mnemonicParsing="false" onAction="#importButton" text="%import" />
+                                    <MenuItem fx:id="exportBut1" mnemonicParsing="false" onAction="#exportButton" text="%export" />
+                                  <MenuItem fx:id="optionsBut" mnemonicParsing="false" onAction="#optionsButton" text="%options" />
+                                    <MenuItem fx:id="updateBut" mnemonicParsing="false" onAction="#updateButton" text="%update" />
+                                    <MenuItem fx:id="contactBut" mnemonicParsing="false" onAction="#contactButton" text="%contact" />
+                                  <MenuItem fx:id="helpBut" mnemonicParsing="false" onAction="#helpButton" text="%help" />
+                                </items>
+                              </MenuButton>
+                              <VBox id="bookList" fx:id="bookList" layoutX="-3.0" layoutY="114.0" prefHeight="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane fx:id="splitPane2" dividerPositions="0.7" layoutX="-38.0" layoutY="-61.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TextArea id="infoText" fx:id="infoText" layoutX="33.0" layoutY="16.0" prefHeight="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="546.0">
+               <children>
+                  <TableView id="flightTable" fx:id="flightTable" layoutX="14.0" layoutY="8.0" minHeight="100.0" minWidth="200.0" prefHeight="358.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#editFlight" text="Edit" />
+                              <MenuItem mnemonicParsing="false" onAction="#deleteFlights" text="Delete" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></TableView>
+                  <Label fx:id="flightsLabel" layoutX="51.0" layoutY="374.0" text="Flights: 0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" />
+                  <Label fx:id="timeLabel" layoutX="61.0" layoutY="384.0" text="Time: 0:00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

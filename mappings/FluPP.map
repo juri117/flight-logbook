@@ -1,0 +1,26 @@
+#[FluPP Map]
+#Tue May 05 13:35:31 CEST 2015
+encoding=ISO8859-1
+seperator=;
+marker=
+nr=-1
+pilot=4
+copilot=5
+passenger=6
+plane=2
+planeCallSign=3
+launchMethod=7
+start=-1
+startDate=1
+startTime=8
+stop=-1
+stopDate=1
+stopTime=9
+flightTime=10
+flightTimeFormat=hh:mm
+landings=14
+fromAf=15
+toAf=16
+distance=18
+cost=-1
+note=17

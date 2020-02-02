@@ -1,0 +1,168 @@
+*{
+	/*general Background */
+	-fx-base: #d0d0d0;
+
+	/*selected border glow */
+	-fx-focus-color: transparent;
+	/*bg accent */
+	-fx-accent: #C7C7C7;
+	/*inner glow on selection */
+	-fx-faint-focus-color: #808080;
+	
+	-bg-color: #DCDCDC;
+	-button-bg-color: #d0d0d0;
+	
+	-fx-disabled-opacity: 0.4;
+}
+
+#addBut{
+	-fx-background-image: url("image/addButton.png");
+    -fx-background-size: 40 30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:5 5;
+    -fx-text-fill: transparent;
+    -fx-background-color: -bg-color;
+}
+
+#menuBut{
+	-fx-background-image: url("image/menButton.png");
+    -fx-background-size: 40 30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:5 5;
+    -fx-text-fill: transparent;
+    -fx-background-color: -bg-color;
+}
+
+#newBut{
+	-fx-background-size: 40 30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:5 5;
+    -fx-text-fill: transparent;
+    -fx-background-color: -bg-color;
+}
+
+.button{
+	-fx-border-width: 0;
+    -fx-background-radius: 18.0;
+    -fx-border-radius: 18.0;
+    -fx-background-color: -button-bg-color;
+}
+
+.button:hover {
+    -fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: -bg-color;
+    -fx-cursor: hand;
+}
+
+.menu-button {
+	-fx-border-width: 0;
+    -fx-background-radius: 18.0;
+    -fx-border-radius: 18.0;
+    -fx-background-color: -button-bg-color;
+}
+
+.menu-button .arrow {
+	-fx-background-color: transparent;
+}
+
+.menu-button:hover {
+    -fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: -bg-color;
+    -fx-cursor: hand;
+}
+
+
+
+.column-header{ 
+    -fx-font-size: 12.0px;
+}
+
+.table-cell {
+    -fx-font-size: 12.0px;
+}
+
+.list-cell {
+	/* 
+        -fx-background-color: transparent;
+    -fx-control-inner-background: -bg-color;
+    */
+    -fx-text-fill: black;
+	-fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 15.0;
+    -fx-border-radius: 15.0;
+    -fx-padding: 5;
+}
+
+.list-cell:selected {
+	-fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: -button-bg-color;
+}
+
+.list-cell:hover:filled {
+	-fx-cursor: hand;
+	-fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: -fx-accent;
+}
+	
+.list-view{
+	-fx-background-color: transparent;
+}
+
+.check-box *.box {
+    -fx-background-color: -bg-color;/* -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;*/
+    -fx-padding: 3; /* 3 -- padding from the outside edge to the mark */
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+}
+
+.editGroup{
+	-fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 0.0;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: -button-bg-color;
+    -fx-padding: 10;
+}
+
+#mainEditGroup{
+	-fx-effect: innershadow(one-pass-box, black, 5, 0.0, 0, 0);
+}
+
+.editField{
+	-fx-effect: innershadow(one-pass-box, grey, 5, 0.0, 0, 0);
+}
+
+.slider .track {
+    -fx-background-insets: 1 0 -1 0, 0, 1;
+    -fx-background-radius: 2.5, 2.5, 1.5;
+    -fx-padding: 4px; /* 2.5 */
+}
+
+.slider .axis {
+    -fx-tick-label-font: 8px System;
+    -fx-padding:0px;
+}
+
+.sliderBox{
+	-fx-background-radius: 10 0 10 10;
+    -fx-border-radius: 10 0 10 10;
+    -fx-border-width: 3.0;
+    -fx-border-color: -fx-faint-focus-color;
+    -fx-effect: innershadow( gaussian, rgba( 0.0, 0.0, 0.0, 0.2 ), 5.0, 0.0, 0.0, 0.0 );
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 3px;
+}
+
+.split-pane > .split-pane-divider {  
+    -fx-padding: 0 1px 0 1px;
+    -fx-background-color: -fx-accent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 5, 0, 0, 0);
+} 
